@@ -28,23 +28,18 @@ if (!localStorage.getItem('estadisticas')) {
 const btnEstadisticas = document.getElementById('statsBtn') 
 
 btnEstadisticas.addEventListener('click', function() {
-  // Get the estadisticas object from localStorage
-  const estadisticasString = localStorage.getItem('estadisticas') 
-  const estadisticas = JSON.parse(estadisticasString) 
+    const estadisticasString = localStorage.getItem('estadisticas') 
+    const estadisticas = JSON.parse(estadisticasString) 
 
-  // Create a template literal with the estadisticas data
-  const estadisticasText = `Jugadas: ${estadisticas.jugadas}\nGanadas: ${estadisticas.ganadas}\nPerdidas: ${estadisticas.perdidas}` 
+    const estadisticasText = `Jugadas: ${estadisticas.jugadas}\nGanadas: ${estadisticas.ganadas}\nPerdidas: ${estadisticas.perdidas}` 
 
-  // Show the SweetAlert dialog with the estadisticas data
-  swal({
+    swal({
     title: 'Estadisticas',
     text: estadisticasText,
     icon: 'info',
     confirmButtonText: 'OK'
   }) 
 }) 
-
-
 
 function updateEstadisticas(resultado) {  
     const estadisticasString = localStorage.getItem('estadisticas') 
@@ -58,9 +53,6 @@ function updateEstadisticas(resultado) {
     const updatedEstadisticasString = JSON.stringify(estadisticas) 
     localStorage.setItem('estadisticas', updatedEstadisticasString) 
 }
-
-
-
 
 async function fetchAndShowPokemons(offset) {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=4` 
@@ -88,9 +80,6 @@ async function fetchAndShowPokemons(offset) {
         }) 
     }) 
 }
-
-
-
 
 fetchAndShowPokemons(offset)
 const nextBtn = document.querySelector("#offsetButtonNext").addEventListener("click", function() {
@@ -144,11 +133,6 @@ async function fetchAllPokemonNames() {
     const data = await response.json() 
     return data.results.map(pokemon => pokemon.name) 
 } 
-
-
-
-
-
 
 
 // Elementos
@@ -374,14 +358,4 @@ function recibirAtaque(min, max, victima ) {
     let danoRecibido = randomInt(min, max) 
     battleLogFunc(`-${victima[0].name} recibe un ataque con un daño de ${danoRecibido}`) 
     victima[0].stats[0].base_stat -= danoRecibido 
-
 }
-
-
-
-
-
-
-
-
-
