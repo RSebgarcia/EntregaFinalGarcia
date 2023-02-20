@@ -1,0 +1,252 @@
+    @import url('https://fonts.cdnfonts.com/css/sf-pixelate'); 
+    /*
+    font-family: 'SF Pixelate', sans-serif;
+    font-family: 'SF Pixelate Shaded', sans-serif;
+    */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'SF Pixelate', sans-serif;
+        overflow: hidden;
+
+    }
+    body{
+        background-color: rgb(26, 25, 34);
+
+    }
+    .row.no-pad {
+        margin-right:0;
+        margin-left:0;
+    }
+    .full{
+        width: calc(100% - 260px);
+    }
+    .side{
+        max-width: 260px;
+    }
+    #side_nav{
+        background-color: #000;
+        min-width: 260px;
+        max-width: 260px;
+        height: 100vh;
+
+
+    }
+    .pad-left{
+    padding-right: 20px;
+    }
+    .content{
+        min-width: 100vh;
+        width: 100%;
+    }
+    hr.h-color{
+        background:#eee ;
+    }
+    .sidebar li.active{
+        white-space: nowrap;
+        background: #eee;
+        border-radius: 0px 10px 10px 0px;
+        animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) both;
+
+    }
+    @keyframes slide-right{
+        0%{width: 0%;}
+        100%{width:95%;
+        }}
+    .sidebar li.active a, .sidebar li.active a:hover{
+        color: #000;
+    }
+
+    .sidebar li a{
+        color: #fff;
+    }
+
+    .campoDeBatalla{
+        background-image: url(./images/backgrounds/backgroundBatalla.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 600px;
+        width: 1070px;
+        overflow: hidden;
+    }
+    .infoDeBatalla{
+        background-image: url(.//images/backgrounds/Buttons.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 450px;
+        width: 1070px;
+    }
+
+
+    .contenedor{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .ventana{
+        min-height:35%; 
+        width: 75%;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px 20px 35px 20px;
+        box-shadow: 0px 0px 10px 4px rgb(9, 9, 9);
+    }
+
+    .imagenPokebola{
+        background-image:url(./images/backgrounds/Pokebolla.png);
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        translate: 0% 198%;
+        filter: drop-shadow(0px 0px 8px rgb(34, 34, 34));
+    }
+    .pokeBtn{
+        border-radius: 10px;
+        filter: drop-shadow(0px 0px 2px rgb(34, 34, 34));
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.389); 
+        margin: 5px;
+        height: 160px;
+        width: 180px;
+
+        padding: 0;
+    }
+
+    .parentTop {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        .gridT1 { grid-area: 1 / 3 / 4 / 6; overflow: hidden;}
+        .gridT2 { grid-area: 1 / 1 / 3 / 3; overflow: hidden;}
+        .gridT3 { grid-area: 3 / 1 / 6 / 3; overflow: hidden;}
+        .gridT4 { grid-area: 4 / 3 / 6 / 6; overflow: hidden;}
+
+
+
+    .hpEnemigo{    
+        translate: 210px 40px;
+        height: 10px;
+        width: 135px;
+        border-radius: 8px;
+        }
+    .nombreAliado , .nombreEnemigo{
+        font-size: 22px;
+        font-weight: 1000;
+        text-align: start;
+    }
+    .nombreEnemigo{
+        translate: 75px 50px;
+
+    }
+    .nombreAliado{
+        translate: 280px 100px;
+    }
+    .hpAliadoCords{
+        translate: 282px 93px ;
+        width: 135px;
+    }
+    #hpAliado{
+        
+        height: 10px;
+        width: 100%;
+        border-radius: 8px;
+
+    }
+    .enemigoPng{
+        translate: 40% 28%;
+        height: 300px;
+    }
+    .aliadoPng{
+        translate: -30 25%;
+        height: 400px;
+    }
+
+    .parentBottom {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        .gridB1 { grid-area: 1 / 1 / 4 / 6; }
+        .gridB2 { grid-area: 4 / 1 / 6 / 5; }
+        .gridB3 { grid-area: 4 / 5 / 6 / 6; }
+
+
+    .textoBatalla{
+        font-size: 20px;
+        translate: 5% 25%;
+        max-width: 1000px;
+        max-height: 98px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    .controlesDeBatalla{
+        width: 800px; 
+        height: 174px;
+        translate: 4% -58%;
+    }
+
+    .btnCombate{
+        font-size: 30px;
+        width: 350px;
+        height: 70px;
+        line-height: 30px;
+        margin-bottom: 20px;
+
+    }
+    #botonMenuAtaque , #botonNoDisponible{
+    margin-right: 38px;
+    }
+
+    .infoAux{
+        translate: -5% -67%;
+        max-width: 195px;
+        max-height: 130px;
+        overflow: scroll;
+        overflow-x: hidden;
+        font-size: 20px;
+    } 
+
+    .apiImgSize{
+        width: 120px;
+        height: 120px;
+    }
+    
+    #offsetButtonPrev{
+        translate: 160% 300%;
+        width: 5%;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.389); 
+    } 
+    #offsetButtonNext{
+        translate: 1690% -300%;
+        width: 5%;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.389); 
+    }
+
+    #offsetButtonRandom{
+        translate: 170% 0%;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.389); 
+        width: 20%;
+    }
+
+    .btnStats{
+        font-size: 25px;
+        color: #fff ;
+    }
+
+    .textoPokemon{
+    translate: 0px -100%;
+}

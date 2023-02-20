@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>PokeSim</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="shortcut icon" href="./images/backgrounds/Pokebolla.png" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="container-fluid g-0">        <!-- navbar lateral actualmente sin funcionalidad.-->
+        <section class="row d-flex justify-content-center align-content-center g-0 ">
+            <div class="col-1 row full g-0 contenidoJuego "> <!-- Contenido -->
+                <div id="selectorPokemon" class="contenedor">  <!-- elejir pokemon -->
+                    <div class="imagenPokebola"></div>
+                        <div class="text-white textoPokemon">
+                            <h1>¡Bienvenido al PokeSim!</h1>
+                            <p >Para comenzar Seleccione que pokemon usara..."</p>
+                            <button id="statsBtn" type="button" class="btn btnStats" > Estadisticas</button>
+                    </div>
+                    <div class="ventana row ">
+                        <h2 id="callToAction" class="pt-4 col-12">¡Elije tu pokemon!</h2>
+                        <button id="offsetButtonPrev" type="button" class="btn mt-2 mb-2">«</button>
+                        <div id="pokeHere" class="d-flex text-center px-5 row justify-content-center "></div>
+                        <button id="offsetButtonNext" type="button" class="btn mt-2 mb-2">»</button>
+                        <button id="offsetButtonRandom" type="button" class="btn mt-2 mb-2">Pagina Aleatoria</button>
+                    </div>
+                </div>
+                <section id="campoDeBatalla" class="bg-black campoDeBatalla parentTop d-none ">  <!-- campo -->
+                    <div  class="imgEnemigo gridT1">
+                        <img id="imgEnemigo"class="enemigoPng" src="" alt="">
+                    </div>
+                    <div id="datosEnemigo" class="gridT2">
+                        <p id="nombreEnemigo" class="nombreEnemigo">Nombre Enemigo</p>
+                        <div class="hpEnemigo bg-success"></div>
+                    </div>
+                    <div class="imgAliado gridT3">
+                        <img id="imgAliado"  class="aliadoPng" src="." alt="">
+                    </div>
+                    <div id="datosAliado" class="gridT4">
+                        <p id="nombreAliado" class="nombreAliado">Nombre Aliado</p>
+                        <div class= "hpAliadoCords">
+                            <div id="hpAliado" class= "hpAliado bg-success"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="infoDeBatalla" class="infoDeBatalla parentBottom d-none" > <!-- Botones -->
+                    <div class="gridB1">
+                        <h3 id="textoBatalla" class="textoBatalla"> </h3>
+                    </div>
+                    <div id="menuDeAcciones" class="controlesDeBatalla gridB2">
+                        <button id="botonMenuAtaque" type="button" class="btn btnCombate text-light">Atacar</button>
+                        <button id="botonCurarse" type="button" class="btn btnCombate text-light ">Usar Pocion</button>
+                        <button id="" type="button" class="btn btnCombate text-light">Bloqueado.</button>
+                        <button id="botonEscapar" type="button" class="btn btnCombate text-light">Escapar</button>
+                    </div>
+                    <div id="menuDeBatalla" class="controlesDeBatalla gridB2 px-1 d-none   ">
+                        <button id="botonRapido" type="button" class="btn btnCombate text-light">Ataque Rapido</button>
+                        <button id="botonEspecial" type="button" class="btn btnCombate text-light ms-4">Ataque especial</button>
+                        <button id="" type="button" class="btn btnCombate text-light">Bloqueado.</button>
+                        <button id="botonVolver" type="button" class="btn btnCombate text-light ms-4">Volver</button>
+                    </div>
+                    <div class="infoAux gridB3">
+                        <p id="infoAux"></p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+    <!--JS-->
+        <script src="./combatSimv2.js"></script>
+        <!-- <script src="./prueba2.js"></script> -->
+</body>
+
+</html>
